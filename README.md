@@ -4,14 +4,14 @@
 **Goal:** A reproducible **baseline → best** pipeline on the Kaggle **Credit Card Fraud Detection** dataset, with clean **metrics**, **plots**, and **ablations**.
 Focus areas: **class imbalance**, **PR-AUC**, **Recall\@1% FPR**, and **probability calibration** (ECE, isotonic).
 
-> **Note:** Results below are **provisional (expected/typical)** for this setup. Replace with your exact numbers after running the code.
+
 
 ---
 
 ## Dataset
 
 * Source: Kaggle — *Credit Card Fraud Detection* (284,807 rows; 492 fraud).
-* Place the CSV at: `data/creditcard.csv` (keep original column names including `Class` as the label).
+* Place the CSV at: `data/creditcard.csv` .
 
 > ⚠️ Do **not** commit the CSV to Git—keep `data/` in `.gitignore`.
 
@@ -55,7 +55,7 @@ python src/make_resume_snippet.py --report_path outputs/report.json
 
 ---
 
-## Results (Provisional/typical for this pipeline)
+## Results 
 
 |                          Model |           PR-AUC          |     Recall@**1% FPR**    |         **ECE** (pre → post isotonic)         |
 | -----------------------------: | :-----------------------: | :----------------------: | :-------------------------------------------: |
@@ -74,7 +74,7 @@ python src/make_resume_snippet.py --report_path outputs/report.json
 
 ---
 
-## Ablations (Provisional examples)
+## Ablations
 
 | Ablation                     | Setting A → B                              |      Δ PR-AUC      |  Δ Recall\@1% FPR  | Notes                                        |
 | ---------------------------- | ------------------------------------------ | :----------------: | :----------------: | -------------------------------------------- |
@@ -104,24 +104,6 @@ Example structure you’ll get after running:
 }
 ```
 
----
-
-## Resume bullets (auto-generated)
-
-After you run the pipeline, execute:
-
-```bash
-python src/make_resume_snippet.py --report_path outputs/report.json
-```
-
-It prints two bullets like:
-
-```
-- Built fraud detector on imbalanced data; **XGBoost** improved **PR-AUC 0.926** (post-iso: 0.930); at **1% FPR** recall was **0.824**.
-- **Isotonic calibration** reduced **ECE 0.063 → 0.028**; reproducible stratified splits; PR/confusion/calibration plots in repo.
-```
-
-Paste them into your README and resume (keep the numbers **bold**).
 
 ---
 
