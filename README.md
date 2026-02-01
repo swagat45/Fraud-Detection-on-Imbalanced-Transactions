@@ -1,5 +1,5 @@
 
-- # Fraud Detection on Imbalanced Transactions
+# Fraud Detection on Imbalanced Transactions
 
 **Goal:** A reproducible **baseline → best** pipeline on the Kaggle **Credit Card Fraud Detection** dataset, with clean **metrics**, **plots**, and **ablations**.
 Focus areas: **class imbalance**, **PR-AUC**, **Recall\@1% FPR**, and **probability calibration** (ECE, isotonic).
